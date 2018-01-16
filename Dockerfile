@@ -19,10 +19,10 @@ ENV container docker
 
 RUN curl http://www.apache.org/dist/bigtop/bigtop-1.1.0/repos/centos7/bigtop.repo -o /etc/yum.repos.d/bigtop.repo
 
-RUN yum update -y ; \
+RUN yum install epel-release -y; \
+    yum update -y ; \
     yum install openssh* wget axel bzip2 unzip gzip git gcc-c++ lsof \
     java-1.8.0-openjdk java-1.8.0-openjdk-devel \
-    epel-release \ 
     sudo hostname -y ; \
     yum clean all; rm -rf /var/cache/yum
 
@@ -76,7 +76,8 @@ RUN echo "export JAVA_HOME=/usr/lib/jvm/java" >> /etc/profile.d/bigbox.sh
 # JAVA environment end
 
 # hadoop init start
-RUN yum install zookeeper-server hadoop-yarn-proxyserver hadoop-hdfs-namenode hadoop-hdfs-datanode \
+RUN yum install zookeeper-server hadoop-yarn-proxyserver \
+    hadoop-hdfs-namenode hadoop-hdfs-datanode \
     hadoop-yarn-resourcemanager hadoop-mapreduce-historyserver \
     hadoop-yarn-nodemanager \
     spark-worker spark-master \
