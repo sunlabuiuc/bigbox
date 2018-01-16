@@ -65,6 +65,7 @@ RUN wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -
 ENV PATH /usr/local/conda3/bin:$PATH
 RUN echo 'export PATH=/usr/local/conda3/bin:$PATH' >> /etc/profile.d/bigbox.sh
 RUN conda install --yes numpy ipython
+RUN pip install asciinema
 
 # Python Section End
 
