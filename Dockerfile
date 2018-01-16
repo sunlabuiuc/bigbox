@@ -20,7 +20,7 @@ ENV container docker
 RUN curl http://www.apache.org/dist/bigtop/bigtop-1.1.0/repos/centos7/bigtop.repo -o /etc/yum.repos.d/bigtop.repo
 
 RUN yum update -y ; \
-    yum install openssh* wget bzip2 unzip gzip git gcc-c++ lsof \
+    yum install openssh* wget axel bzip2 unzip gzip git gcc-c++ lsof \
     java-1.8.0-openjdk java-1.8.0-openjdk-devel \
     epel-release \ 
     sudo hostname -y ; \
