@@ -42,7 +42,7 @@ VOLUME [ "/sys/fs/cgroup" ]
 RUN ssh-keygen -A
 RUN mkdir /var/run/sshd
 
-# use password 'mypassword123' here
+# Initialize A Password Here
 RUN echo 'root:youjumpijump' | chpasswd
 # RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
@@ -110,6 +110,9 @@ RUN /scripts/hadoop.env.init.sh
 # # ENV PATH /usr/local/zeppelin/bin:$PATH
 # RUN echo 'export PATH=/usr/local/zeppelin/bin:$PATH' >> /etc/profile.d/bigbox.sh
 
+# Reserved For Jupiter
+EXPOSE 8888
+# Reserved For Zeppelin
 EXPOSE 9530
 
 # /usr/bin/sudo -i -u zeppelin /usr/local/zeppelin/bin/zeppelin-daemon.sh start

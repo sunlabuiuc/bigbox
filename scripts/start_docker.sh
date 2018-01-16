@@ -3,7 +3,7 @@ docker run -it --privileged=true \
   --cap-add=SYS_ADMIN \
   --security-opt seccomp=unconfined \
   -m 8192m -h bootcamp1.docker \
-  --name bigbox -p 2222:22 -p 9530:9530 \
+  --name bigbox -p 2222:22 -p 9530:9530 -p 8888:8888 \
   bigbox /bin/bash
 
 
