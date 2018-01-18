@@ -76,6 +76,16 @@ RUN echo "export JAVA_HOME=/usr/lib/jvm/java" >> /etc/profile.d/bigbox.sh
 
 # JAVA environment end
 
+# Install Scala
+RUN yum -y localinstall https://downloads.lightbend.com/scala/2.10.7/scala-2.10.7.rpm
+
+# Install sbt
+RUN wget https://github.com/sbt/sbt/releases/download/v1.1.0/sbt-1.1.0.tgz ; \
+    tar -xzvf sbt-1.1.0.tgz ; \
+    rm -rf sbt-1.1.0.tgz ; \
+    mv sbt /usr/lib/ ; \
+    ln -sf /usr/lib/sbt/bin/sbt /usr/bin/
+
 # hadoop init start
 RUN yum install zookeeper-server hadoop-yarn-proxyserver \
     hadoop-hdfs-namenode hadoop-hdfs-datanode \
