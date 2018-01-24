@@ -2,7 +2,7 @@
 
 Yet another integrated envoronment.
 
-Please refere to [http://sunlab.org/teaching/cse6250/spring2018/lab/env-local-docker/](http://sunlab.org/teaching/cse6250/spring2018/lab/env-local-docker/) for detail.
+Please refere to [http://sunlab.org/teaching/cse6250/spring2018/lab/env-local-docker/](http://sunlab.org/teaching/cse6250/spring2018/lab/env-local-docker/) for detail instruction.
 
 ```
 docker run -it --privileged=true \
@@ -12,4 +12,13 @@ docker run -it --privileged=true \
   sunlab/bigbox:latest \
   /bin/bash
 ```
+
+Related Links:
+
++ Docker Image: [https://hub.docker.com/r/sunlab/bigbox/](https://hub.docker.com/r/sunlab/bigbox/)
++ FAQs: [https://github.com/yuikns/bigbox/wiki/FAQ](https://github.com/yuikns/bigbox/wiki/FAQ)
++ Sample Code: [https://bitbucket.org/realsunlab/bigdata-bootcamp](https://bitbucket.org/realsunlab/bigdata-bootcamp)
++ Scripts: [https://github.com/yuikns/bigbox-scripts](https://github.com/yuikns/bigbox-scripts)
+
+
 
