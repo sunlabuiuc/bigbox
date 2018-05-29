@@ -2,7 +2,7 @@
 
 Yet another integrated envoronment.
 
-Please refere to [http://sunlab.org/teaching/cse6250/spring2018/lab/env-local-docker/](http://sunlab.org/teaching/cse6250/spring2018/lab/env-local-docker/) for detail instruction.
+Please refere to <http://sunlab.org/teaching/cse6250/fall2018/env/env-local-docker.html> for detail instruction.
 
 ```
 docker run -it --privileged=true \
