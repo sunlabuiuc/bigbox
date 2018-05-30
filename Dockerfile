@@ -49,8 +49,18 @@ RUN yum install zookeeper-server hadoop-yarn-proxyserver \
     hive-metastore pig -y ; \
     yum clean all; rm -rf /var/cache/yum
 
-# 2. Configure JAVA_HOME
+# 2. Configure JAVA_HOME, Scala, SBT etc.
 RUN echo "export JAVA_HOME=/usr/lib/jvm/java" >> /etc/profile.d/bigbox.sh
+
+ENV SCALA_VERSION 2.11.12
+RUN yum -y localinstall https://downloads.lightbend.com/scala/${SCALA_VERSION}/scala-${SCALA_VERSION}.rpm
+
+ENV SBT_VERSION 1.1.0
+RUN wget https://github.com/sbt/sbt/releases/download/v${SBT_VERSION}/sbt-${SBT_VERSION}.tgz ; \
+    tar -xzf sbt-${SBT_VERSION}.tgz ; \
+    rm -rf sbt-${SBT_VERSION}.tgz ; \
+    mv sbt /usr/lib/ ; \
+    ln -sf /usr/lib/sbt/bin/sbt /usr/bin/
 
 # 3. Clone Materials to /bigdata-bootcamp
 RUN git clone https://bitbucket.org/realsunlab/bigdata-bootcamp.git /bigdata-bootcamp
