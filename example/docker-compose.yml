@@ -2,7 +2,7 @@ version: '3'
 
 services:
   bootcamp:
-    image: sunlab/bigbox:next
+    image: sunlab/bigbox:latest
     # bootcamp.local
     hostname: bootcamp
     domainname: local
