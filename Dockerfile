@@ -52,7 +52,7 @@ RUN yum install zookeeper-server hadoop-yarn-proxyserver \
 # 2. Configure JAVA_HOME, Scala, SBT etc.
 RUN echo "export JAVA_HOME=/usr/lib/jvm/java" >> /etc/profile.d/bigbox.sh
 
-ENV SCALA_VERSION 2.11.12
+ENV SCALA_VERSION 2.11.8
 RUN yum -y localinstall https://downloads.lightbend.com/scala/${SCALA_VERSION}/scala-${SCALA_VERSION}.rpm
 
 ENV SBT_VERSION 1.1.0
