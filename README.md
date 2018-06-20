@@ -7,7 +7,7 @@ Please refere to <http://sunlab.org/teaching/cse6250/fall2018/env/env-local-dock
 ```
 docker run -it --privileged=true \
   --cap-add=SYS_ADMIN \
-  -m 8192m -h bootcamp1.docker \
+  -m 8192m -h bootcamp.local \
   --name bigbox -p 2222:22 -p 9530:9530 -p 8888:8888\
   sunlab/bigbox:latest \
   /bin/bash
