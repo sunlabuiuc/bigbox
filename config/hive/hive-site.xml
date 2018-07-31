@@ -26,7 +26,6 @@
 <!-- resource).                                                                                 -->
 
 <!-- Hive Execution Parameters -->
-<!-- 
 <property>
   <name>javax.jdo.option.ConnectionURL</name>
   <value>jdbc:derby:;databaseName=/var/lib/hive/metastore/metastore_db;create=true</value>
@@ -44,31 +43,6 @@
   <value>/usr/lib/hive/lib/hive-hwi-.war</value>
   <description>This is the WAR file with the jsp content for Hive Web Interface</description>
 </property>
--->
 
-
-<!-- https://dzone.com/articles/how-configure-mysql-metastore -->
-<property>
-   <name>javax.jdo.option.ConnectionURL</name>
-   <value>jdbc:mysql://tidb/metastore?createDatabaseIfNotExist=true</value>
-   <description>metadata is stored in a MySQL server</description>
-</property>
-<property>
-   <name>javax.jdo.option.ConnectionDriverName</name>
-   <value>com.mysql.jdbc.Driver</value>
-   <description>MySQL JDBC driver class</description>
-</property>
-<property>
-   <name>javax.jdo.option.ConnectionUserName</name>
-   <value>hiveuser</value>
-   <description>user name for connecting to mysql server</description>
-</property>
-
-<!-- GRANT all on *.* to 'hiveuser'@'%' identified by 'hivepassword'; -->
-<property>
-   <name>javax.jdo.option.ConnectionPassword</name>
-   <value>hivepassword</value>
-   <description>password for connecting to mysql server</description>
-</property>
 
 </configuration>
