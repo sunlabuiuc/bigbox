@@ -36,9 +36,12 @@ source /etc/bashrc
 # sudo service hbase-master start
 # sudo service hbase-thrift start
 
-sudo mkdir -p /var/log/spark/
+sudo chmod 0777  /var/log
+sudo mkdir -p /var/log/spark
+sudo chmod 0777 /var/log/spark
 sudo mkdir -p /tmp/spark-events
 sudo chmod 0777 /tmp/spark-events
+
 
 sudo service zookeeper-server start
 sudo service hadoop-yarn-proxyserver start
