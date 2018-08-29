@@ -18,7 +18,7 @@ services:
     # command: [ "/usr/sbin/sshd", "-D" ]
     ports:
       - "2333:22"
-      - "8888:8888" # jupiter
+      - "8888:8888" # jupyter
       - "9530:9530" # zeppelin
       # - "8983:8983" # solr
 
