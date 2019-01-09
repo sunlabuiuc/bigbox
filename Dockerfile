@@ -83,11 +83,13 @@ COPY config/zookeeper /etc/zookeeper/conf/
 RUN /scripts/init.sh
 
 # 7. Install Miniconda Python
-RUN wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh && chmod +x miniconda.sh && ./miniconda.sh -b -p /usr/local/conda3 && rm -rf miniconda.sh
+RUN wget --progress=dot:mega https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh && \
+      chmod +x miniconda.sh && ./miniconda.sh -b -p /usr/local/conda3 && \
+      rm -f miniconda.sh
 ENV PATH /usr/local/conda3/bin:$PATH
 RUN echo 'export PATH=/usr/local/conda3/bin:$PATH' >> /etc/profile.d/bigbox.sh
 RUN conda install --yes numpy ipython
-RUN pip install asciinema
+RUN pip install --no-cache-dir asciinema
 
 
 # N. tini
