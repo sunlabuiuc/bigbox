@@ -14,7 +14,7 @@ docker run -it -m 8192m -h bootcamp.local \
 Related Links:
 
 + Docker Image: [https://hub.docker.com/r/sunlab/bigbox/](https://hub.docker.com/r/sunlab/bigbox/)
-+ FAQs: [https://github.com/yuikns/bigbox/wiki/FAQ](https://github.com/yuikns/bigbox/wiki/FAQ)
++ FAQs: [https://github.com/sunlabga/bigbox/wiki/FAQ](https://github.com/sunlabga/bigbox/wiki/FAQ)
 + Sample Code: [https://bitbucket.org/realsunlab/bigdata-bootcamp](https://bitbucket.org/realsunlab/bigdata-bootcamp)
 + Scripts: [https://github.com/sunlabga/bigbox-scripts](https://github.com/sunlabga/bigbox-scripts)
 
