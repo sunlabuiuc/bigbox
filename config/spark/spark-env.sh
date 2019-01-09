@@ -45,3 +45,5 @@ export SPARK_WORKER_WEBUI_PORT=18081
 export SPARK_MASTER_URL=spark://$STANDALONE_SPARK_MASTER_HOST:$SPARK_MASTER_PORT
 export SPARK_HISTORY_OPTS="$SPARK_HISTORY_OPTS -Dspark.history.fs.logDirectory=file:///var/log/spark/apps -Dspark.history.ui.port=18082"
 # export SPARK_HISTORY_OPTS="$SPARK_HISTORY_OPTS -Dspark.history.fs.logDirectory=hdfs:///var/log/spark/apps -Dspark.history.ui.port=18082"
+
+export SPARK_DIST_CLASSPATH=$(hadoop classpath)
