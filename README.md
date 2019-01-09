@@ -2,7 +2,7 @@
 
 Yet another integrated envoronment.
 
-Please refere to <http://sunlab.org/teaching/cse6250/fall2018/env/env-local-docker.html> for detail instruction.
+Please see <http://sunlab.org/teaching/cse6250/spring2019/env/env-local-docker.html> for detail instruction.
 
 ```
 docker run -it -m 8192m -h bootcamp.local \
