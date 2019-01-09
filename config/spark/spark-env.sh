@@ -33,6 +33,7 @@ export SCALA_LIBRARY_PATH=${SCALA_LIBRARY_PATH:-${SPARK_HOME}/lib}
 # Let's make sure that all needed hadoop libs are added properly
 export CLASSPATH="$CLASSPATH:$HADOOP_HOME/*:$HADOOP_HDFS_HOME/*:$HADOOP_YARN_HOME/*:$HADOOP_MAPRED_HOME/*"
 export SPARK_LIBRARY_PATH=$SPARK_LIBRARY_PATH:${HADOOP_HOME}/lib/native
+export SPARK_DIST_CLASSPATH=$(hadoop classpath)
 
 # export STANDALONE_SPARK_MASTER_HOST=`hostname -f`
 export STANDALONE_SPARK_MASTER_HOST="bootcamp.local"
@@ -46,4 +47,3 @@ export SPARK_MASTER_URL=spark://$STANDALONE_SPARK_MASTER_HOST:$SPARK_MASTER_PORT
 export SPARK_HISTORY_OPTS="$SPARK_HISTORY_OPTS -Dspark.history.fs.logDirectory=file:///var/log/spark/apps -Dspark.history.ui.port=18082"
 # export SPARK_HISTORY_OPTS="$SPARK_HISTORY_OPTS -Dspark.history.fs.logDirectory=hdfs:///var/log/spark/apps -Dspark.history.ui.port=18082"
 
-export SPARK_DIST_CLASSPATH=$(hadoop classpath)
