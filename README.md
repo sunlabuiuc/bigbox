@@ -16,7 +16,7 @@ Related Links:
 + Docker Image: [https://hub.docker.com/r/sunlab/bigbox/](https://hub.docker.com/r/sunlab/bigbox/)
 + FAQs: [https://github.com/yuikns/bigbox/wiki/FAQ](https://github.com/yuikns/bigbox/wiki/FAQ)
 + Sample Code: [https://bitbucket.org/realsunlab/bigdata-bootcamp](https://bitbucket.org/realsunlab/bigdata-bootcamp)
-+ Scripts: [https://github.com/yuikns/bigbox-scripts](https://github.com/yuikns/bigbox-scripts)
++ Scripts: [https://github.com/sunlabga/bigbox-scripts](https://github.com/sunlabga/bigbox-scripts)
 
 
 
