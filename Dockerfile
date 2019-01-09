@@ -66,7 +66,7 @@ RUN wget https://github.com/sbt/sbt/releases/download/v${SBT_VERSION}/sbt-${SBT_
 RUN git clone https://bitbucket.org/realsunlab/bigdata-bootcamp.git /bigdata-bootcamp
 
 # 4. Add Extra Basic scripts
-RUN git clone https://github.com/yuikns/bigbox-scripts.git /scripts
+RUN git clone https://github.com/sunlabga/bigbox-scripts.git /scripts
 
 # 5. Overide local scripts and configs
 COPY scripts /scripts/
