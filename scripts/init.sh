@@ -40,6 +40,8 @@ source /etc/profile.d/bigbox.sh
 
 set -Eeuxo pipefail
 
+echo NETWORKING=yes > /etc/sysconfig/network
+
 echo '127.0.0.1 bootcamp.local' >> /etc/hosts
 
 # Fix: Class org.datanucleus.api.jdo.JDOPersistenceManagerFactory was not found.
