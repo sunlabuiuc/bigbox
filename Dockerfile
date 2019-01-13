@@ -56,7 +56,7 @@ ENV SCALA_VERSION 2.11.8
 RUN yum -y localinstall https://downloads.lightbend.com/scala/${SCALA_VERSION}/scala-${SCALA_VERSION}.rpm
 
 ENV SBT_VERSION 1.1.0
-RUN wget https://github.com/sbt/sbt/releases/download/v${SBT_VERSION}/sbt-${SBT_VERSION}.tgz ; \
+RUN wget --progress=dot:mega https://github.com/sbt/sbt/releases/download/v${SBT_VERSION}/sbt-${SBT_VERSION}.tgz ; \
     tar -xzf sbt-${SBT_VERSION}.tgz ; \
     rm -rf sbt-${SBT_VERSION}.tgz ; \
     mv sbt /usr/lib/ ; \
