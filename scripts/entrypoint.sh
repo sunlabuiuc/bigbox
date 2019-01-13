@@ -41,6 +41,8 @@ sudo mkdir -p /var/log/spark
 sudo chmod 0777 /var/log/spark
 sudo mkdir -p /tmp/spark-events
 sudo chmod 0777 /tmp/spark-events
+sudo mkdir -p /var/log/hive
+sudo chmod 0777 /var/log/hive
 
 
 sudo service zookeeper-server start
@@ -59,6 +61,8 @@ sudo service hbase-regionserver start
 sudo service hbase-master start
 sudo service hbase-thrift start
 
+# actuall it is not required
+sudo service hive-metastore start
 
 echo "master is ready, rock it!"
 # Holding over here
