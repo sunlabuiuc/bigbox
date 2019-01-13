@@ -5,6 +5,8 @@
 source /etc/profile.d/bigbox.sh
 source /etc/bashrc
 
+set -Eeuxo pipefail
+
 cat >> /etc/profile.d/bigbox.sh <<'EOF'
 # Hadoop Base
 export ZOOKEEPER_HOME=/usr/lib/zookeeper
