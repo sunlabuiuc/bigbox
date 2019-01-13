@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
 [ ! -f /etc/profile.d/bigbox.sh ] && touch /etc/profile.d/bigbox.sh
-
 source /etc/profile.d/bigbox.sh
 source /etc/bashrc
-
-set -Eeuxo pipefail
 
 cat >> /etc/profile.d/bigbox.sh <<'EOF'
 # Hadoop Base
@@ -21,7 +18,7 @@ export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 export SPARK_HOME=/usr/lib/spark
 export HBASE_HOME=/usr/lib/hbase
 export HIVE_HOME=/usr/lib/hive
-export HADOOP_OPTS="$HADOOP_OPTS -Djava.library.path=$HADOOP_HOME/lib/native"
+export HADOOP_OPTS="${HADOOP_OPTS} -Djava.library.path=$HADOOP_HOME/lib/native"
 # WHY DOES NOT WORK?
 # export HADOOP_CLASSPATH="$HADOOP_CLASSPATH:$HIVE_HOME/lib/*"
 # Zeppelin Section
@@ -39,9 +36,11 @@ export PATH=$PATH:$ZOOKEEPER_HOME/bin
 
 EOF
 
-echo '127.0.0.1 bootcamp.local' >> /etc/hosts
-
 source /etc/profile.d/bigbox.sh
+
+set -Eeuxo pipefail
+
+echo '127.0.0.1 bootcamp.local' >> /etc/hosts
 
 # Fix: Class org.datanucleus.api.jdo.JDOPersistenceManagerFactory was not found.
 #
