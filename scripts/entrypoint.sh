@@ -61,8 +61,7 @@ sudo service hbase-regionserver start
 sudo service hbase-master start
 sudo service hbase-thrift start
 
-# actuall it is not required
-sudo service hive-metastore start
+# sudo service hive-metastore start
 
 echo "master is ready, rock it!"
 # Holding over here
